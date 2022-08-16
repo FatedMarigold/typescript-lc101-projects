@@ -46,8 +46,13 @@ export class Rocket {
         }
     }
 
-    addAstronaut () {
-
+    addAstronaut (astronaut: Astronaut): boolean {
+        if (this.canAdd(astronaut) === true) {
+            this.astronauts.push(astronaut);
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
